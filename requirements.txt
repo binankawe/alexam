@@ -17,4 +17,9 @@ future
 psutil
 wget
 tswift
-
+httpx==0.13.3
+heroku3
+gitpython
+pymongo
+motor
+dnspython
