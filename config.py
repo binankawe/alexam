@@ -7,8 +7,8 @@ if os.path.exists("local.env"):
     load_dotenv("local.env")
 
 que = {}
-SESSION_NAME = getenv("SESSION_NAME", "BQAXeq46obeHQL6Sz_iJwbMAk_jnT4Ytbg5hfCZnRmCjZHP_fXb6iP9EiHULcJhYmfSpF70gOCOjz1_C1h1-AEOcdb3PabzVR4Xow5gtRGefxQ1kay3dzWnIIAhVlzR5I_-cQoqO-RzPh8aESfdz4jHyXxTO1pEFR6bMPTvweTRmpIOFR156D8XIdiZBc0st-4dZYn2B9WVxWSDs9M1FQdRM1elQ59Vp0qO4sP8Kheq3m523oY0aS7odrkpnUvXLg8YraY0q7yGDe7F8p5BYUNx_akw_SRJyoFZ5MenlaMHR-aBw_FnB-AoBMWMKCSy4vmnBbvYiCGCzpJf35LK0vPmvaT9o4gA")
-BOT_TOKEN = getenv("BOT_TOKEN", "2072190749:AAHz8P1_ADtIp4n9p4UdRvS1pyGxldjnD4Q")
+SESSION_NAME = getenv("SESSION_NAME", "BQBoSzVD_FSY5sHW3Z43_4C9YkileACmxJyKu35sHrfUTsoFnAor6Xp3rBBRkhUAmntes7YpWOVcg91t7UMQQ8JheLV96cKrL7rEP8kIj9zShfv7Xod6n-Pha4-X5M8072SSqtLf1monhZTF78fh1Sht67zZtVl_nbCmlNBg0ofiGGqrWhtgsU_wqDvrdNVCesggw5h0HYDvmcrLN5W5qJMRhNKReHvo2bhkR0KRJ8GRpifsYK2qtKJiKcE_yoNZLk8gP0T4FwMDc3h2t3mxHYjfv_O7cMLPhSeOyhAsh1iMCFzvpIheuecyCd7N-YZ6Sge5l5j4z7scZqMZFd--Yz8baT9o4gA")
+BOT_TOKEN = getenv("BOT_TOKEN", "2072190749:AAENijOi3p9CxSoJeDrKkWRPb_KziRuJNVM")
 BOT_NAME = getenv("BOT_NAME", "Alexa")
 UPDATES_CHANNEL = getenv("UPDATES_CHANNEL", "-1001319845035")
 BG_IMAGE = getenv("BG_IMAGE", "https://telegra.ph/file/36256d986b9c69902e4c4.png")
@@ -19,8 +19,9 @@ BOT_USERNAME = getenv("BOT_USERNAME", "alexagroup_bot")
 ASSISTANT_NAME = getenv("ASSISTANT_NAME", "alexaassisten")
 SUPPORT_GROUP = getenv("SUPPORT_GROUP", "robotprojectx")
 PROJECT_NAME = getenv("PROJECT_NAME", "Alexa")
+DATABASE_URL = os.environ.get("mongodb+srv://alexam:sad1899@cluster0.f5kx3.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 OWNER = getenv("OWNER", "justthetech")
-DATABASE_URL = os.environ.get("DATABASE_URL")  # fill with your mongodb url
+OWNER_NAME = getenv("OWNER", "justthetech")
 SOURCE_CODE = getenv("SOURCE_CODE", "github.com/Vckyou/Geez-MusicProject")
 DURATION_LIMIT = int(getenv("DURATION_LIMIT", "15"))
 ARQ_API_KEY = getenv("ARQ_API_KEY", None)
