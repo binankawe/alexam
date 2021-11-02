@@ -8,7 +8,7 @@ if os.path.exists("local.env"):
 
 que = {}
 SESSION_NAME = getenv("SESSION_NAME", "BQBoSzVD_FSY5sHW3Z43_4C9YkileACmxJyKu35sHrfUTsoFnAor6Xp3rBBRkhUAmntes7YpWOVcg91t7UMQQ8JheLV96cKrL7rEP8kIj9zShfv7Xod6n-Pha4-X5M8072SSqtLf1monhZTF78fh1Sht67zZtVl_nbCmlNBg0ofiGGqrWhtgsU_wqDvrdNVCesggw5h0HYDvmcrLN5W5qJMRhNKReHvo2bhkR0KRJ8GRpifsYK2qtKJiKcE_yoNZLk8gP0T4FwMDc3h2t3mxHYjfv_O7cMLPhSeOyhAsh1iMCFzvpIheuecyCd7N-YZ6Sge5l5j4z7scZqMZFd--Yz8baT9o4gA")
-BOT_TOKEN = getenv("BOT_TOKEN", "2072190749:AAENijOi3p9CxSoJeDrKkWRPb_KziRuJNVM")
+BOT_TOKEN = getenv("BOT_TOKEN", "2089021547:AAG83d2ocJub7G7TtTp6bb8g5Wf4rRmWFaE")
 BOT_NAME = getenv("BOT_NAME", "Alexa")
 UPDATES_CHANNEL = getenv("UPDATES_CHANNEL", "-1001319845035")
 BG_IMAGE = getenv("BG_IMAGE", "https://telegra.ph/file/36256d986b9c69902e4c4.png")
