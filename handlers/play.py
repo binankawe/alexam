@@ -396,7 +396,7 @@ async def m_cb(b, cb):
 
 
 
-@Client.on_message(command("play") & other_filters)
+@Client.on_message(command(["play", f"play@{BOT_USERNAME}"]) & other_filters)
 async def play(_, message: Message):
     global que
     global useer
@@ -493,8 +493,8 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("☕ ᴜᴘᴅᴀᴛᴇ", url="https://t.me/robotprojectx"),
-                    InlineKeyboardButton("ᴏᴡɴᴇʀ ☕", url="https://t.me/justthetech"),
+                    InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇ", url="https://t.me/robotprojectx"),
+                    InlineKeyboardButton("ᴏᴡɴᴇʀ", url="https://t.me/justthetech"),
                 ],
                 [InlineKeyboardButton(text="❌", callback_data="cls")],
             ]
@@ -520,7 +520,7 @@ async def play(_, message: Message):
             results = YoutubeSearch(query, max_results=1).to_dict()
             url = f"https://youtube.com{results[0]['url_suffix']}"
             # print(results)
-            title = results[0]["title"][:25]
+            title = results[0]["title"][:60]
             thumbnail = results[0]["thumbnails"][0]
             thumb_name = f"thumb{title}.jpg"
             thumb = requests.get(thumbnail, allow_redirects=True)
@@ -540,8 +540,8 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("☕ ᴜᴘᴅᴀᴛᴇ", url="https://t.me/robotprojectx"),
-                    InlineKeyboardButton("ᴏᴡɴᴇʀ ☕", url="https://t.me/justthetech"),
+                    InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇ", url="https://t.me/robotprojectx"),
+                    InlineKeyboardButton("ᴏᴡɴᴇʀ", url="https://t.me/justthetech"),
                 ],
                 [InlineKeyboardButton(text="❌", callback_data="cls")],
             ]
@@ -555,7 +555,7 @@ async def play(_, message: Message):
             query += " " + str(i)
         print(query)
         await lel.edit("🎵 **Music Sedang Diproses**")
-        ydl_opts = {"format": "bestaudio[ext=m4a]"}
+        ydl_opts = {"format": "bestaudio/best"}
         
         try:
           results = YoutubeSearch(query, max_results=6).to_dict()
@@ -563,7 +563,7 @@ async def play(_, message: Message):
           await lel.edit("**Ketik /play Judul Lagu**")
         # Looks like hell. Aren't it?? FUCK OFF
         try:
-            toxxt = "**Silahkan Pilih lagu yang ingin Anda Putar:**\n\n"
+            toxxt = "**Silahkan Pilih lagu yang ingin Anda Putar :**\n\n"
             j = 0
             useer=user_name
             emojilist = ["1️⃣","2️⃣","3️⃣","4️⃣","5️⃣","6️⃣"]
@@ -599,7 +599,7 @@ async def play(_, message: Message):
             # print(results)
             try:
                 url = f"https://youtube.com{results[0]['url_suffix']}"
-                title = results[0]["title"][:25]
+                title = results[0]["title"][:60]
                 thumbnail = results[0]["thumbnails"][0]
                 thumb_name = f"thumb{title}.jpg"
                 thumb = requests.get(thumbnail, allow_redirects=True)
@@ -619,8 +619,8 @@ async def play(_, message: Message):
             keyboard = InlineKeyboardMarkup(
                 [
                     [
-                    InlineKeyboardButton("☕ ᴜᴘᴅᴀᴛᴇ", url="https://t.me/robotprojectx"),
-                    InlineKeyboardButton("ᴏᴡɴᴇʀ ☕", url="https://t.me/justthetech"),
+                    InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇ", url="https://t.me/robotprojectx"),
+                    InlineKeyboardButton("ᴏᴡɴᴇʀ", url="https://t.me/justthetech"),
                 ],
                     [InlineKeyboardButton(text="❌", callback_data="cls")],
                 ]
@@ -639,7 +639,7 @@ async def play(_, message: Message):
         qeue.append(appendable)
         await message.reply_photo(
             photo="final.png",
-            caption = f"📋 **Judul :** [{title}]({url}) \n#️⃣ **Antrian** : {position}",
+            caption = f"__[{title}]({url})__ \n#️⃣ **Antrian** : {position}",
                    reply_markup=keyboard)
        
     else:
@@ -658,7 +658,7 @@ async def play(_, message: Message):
             return
         await message.reply_photo(
             photo="final.png",
-            caption = f"📋 **Judul :** [{title[:60]}]({url})\n⏱️ **Durasi :** {duration}\n" \
+            caption = f"__[{title[:60]}]({url})__\n⏱️ **Durasi :** {duration}\n" \
                     + f"👤 **Request Dari :** {message.from_user.mention}",
                    reply_markup=keyboard)
 
@@ -692,7 +692,7 @@ async def lol_cb(b, cb):
     
     results = YoutubeSearch(query, max_results=6).to_dict()
     resultss=results[x]["url_suffix"]
-    title=results[x]["title"][:25]
+    title=results[x]["title"][:60]
     thumbnail=results[x]["thumbnails"][0]
     duration=results[x]["duration"]
     views=results[x]["views"]
@@ -717,8 +717,8 @@ async def lol_cb(b, cb):
     keyboard = InlineKeyboardMarkup(
             [
             [
-                    InlineKeyboardButton("☕ ᴜᴘᴅᴀᴛᴇ", url="https://t.me/robotprojectx"),
-                    InlineKeyboardButton("ᴏᴡɴᴇʀ ☕", url="https://t.me/justthetech"),
+                    InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇ", url="https://t.me/robotprojectx"),
+                    InlineKeyboardButton("ᴏᴡɴᴇʀ", url="https://t.me/justthetech"),
             ],
                     [InlineKeyboardButton("❌", callback_data="cls")],
             ]
@@ -740,7 +740,7 @@ async def lol_cb(b, cb):
         await cb.message.delete()
         await b.send_photo(chat_id,
             photo="final.png",
-            caption = f"📋 **Judul :** [{title[:60]}]({url})\n⏱️ **Durasi** : {duration}\n#️⃣ **Antrian** : {position}", 
+            caption = f"__[{title[:60]}]({url})__\n⏱️ **Durasi** : {duration}\n#️⃣ **Antrian** : {position}", 
                    reply_markup=keyboard,
         )
         os.remove("final.png")
@@ -761,7 +761,7 @@ async def lol_cb(b, cb):
         await cb.message.delete()
         await b.send_photo(chat_id,
             photo="final.png",
-            caption = f"📋 **Judul :** [{title[:60]}]({url})\n⏱ **Durasi :** {duration}\n" \
+            caption = f"__[{title[:60]}]({url})__\n⏱ **Durasi :** {duration}\n" \
                     + f"👤 **Request Dari :** {r_by.mention}",
                     reply_markup=keyboard,
         )
